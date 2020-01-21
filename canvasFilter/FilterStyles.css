@@ -1,0 +1,56 @@
+/* reset CSS */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    font-size: 100%;
+
+    vertical-align: baseline;
+
+}
+@media screen and (min-width: 1024px) { aside {width:22%; float: left; padding:0px 10px 0px 15px; } }
+@media screen and (min-width: 480px) and (max-width:1024px){ aside {display:none} }
+body{ font-family: 'Roboto', sans-serif; font-size: 20px; }
+
+/*#site { width: 90%; margin-left: 15%; margin-right: 15%;  border: solid 1px slategray; }
+*/
+body {
+    background-image: url("https://previews.123rf.com/images/palinchak/palinchak1808/palinchak180800430/106849593-abstract-light-gray-background-old-paint-and-rust-old-painted-metal-texture-sheet-of-iron-covered-wi.jpg");
+}
+
+
+.col1
+
+{ background: #777;}
+
+.col2
+
+{ background: transparent;}
+
+.col3
+
+{ background: #117a8b}
+
+
+a:any-link {
+    color: #062c33;
+}
+
+header {
+    margin-left: 15%; margin-right: 15%;
+    width: 75%;
+    background: transparent;
+}
+
+* {box-sizing:border-box}
+
+
+figure{font-family: 'Roboto', sans-serif; font-size: 10px;}
+
+h1{font-family: 'Roboto', sans-serif; font-size: 30px;}
+li{padding-left:20%}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plswork</title>
+    <script>
+        var img = new Image();
+        document.getElementById('inp').onchange = function(e) {
+            img.src = URL.createObjectURL(this.files[0]);
+            //img.onload = draw;
+            img.onerror = failed;
+            draw();
+    };
+    function draw() {
+        var canvas = document.getElementById('canvas');
+        canvas.width = this.width;
+        canvas.height = this.height;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0,0);
+    }
+    function failed() {
+        console.error("The provided file couldn't be loaded as an Image media");
+    }
+
+    </script>
+</head>
+<body>
+<label>Image File:</label><br/>
+<input type="file" id="inp">
+<canvas id="canvas"></canvas>
+</body>
+</html>
