@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miesięcznik modelarski</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheets" href="css/datastyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $.getJSON('http://time.jsontest.com', function(data) {
+
+            var text = `                        Date: ${data.date}
+                        Time: ${data.time}
+                        Unix time: ${data.milliseconds_since_epoch}`;
+            alert(text);
+
+
+            $(".mypanel").html(text);
+        });
+        var items = [];
+
+
+        $.getJSON('http://orfi.uwm.edu.pl/~s145968/Pr2/Ajax/dane.json', function(data) {
+
+
+            $.each( data, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + val + "</li>" );
+            });
+            if (Array.isArray(items) && items.length>0) {
+                $("<ul/>", {
+                    "class": "items-list",
+                    html: items.join("")
+                }).appendTo("data");
+
+
+                $(".items-list").html(data);
+            }
+
+        });
+        if(items.length ==0){
+            alert("failed to load orfi json");
+        }
+    </script>
+</head>
+<body>
+<section id="site">
+
+    <div class="row">
+
+        <div class="col-md-3 offset-md-2 col1 text-md-center">
+
+            <a href="HomePage.html" >Home</a>
+
+        </div>
+        <div class="col-md-3  col3 text-md-center">
+
+            <a href="Publications.html" >Publikacje</a>
+
+        </div>
+        <div class="col-md-3  col1 text-md-center">
+
+            <a href="Gallery.html" >Galeria</a>
+
+        </div>
+
+    </div>
+    <header>
+        <div class="text-center">
+            <img src="https://1.bp.blogspot.com/-o21WD-lX3bw/XdO0sqxiF9I/AAAAAAAAACU/LwNVSlO-LCsSxak6MhNo5tlk0I2HsRx-QCLcBGAsYHQ/s1600/IMG_20191023_193524%255B1%255D.jpg" class="img-fluid" width="75%" alt="Responsive image">
+        </div>
+    </header>
+    <div class="container" >
+        <div class="row">
+
+            <div class="col-md-7 offset-md-3 col1 text-md-center">
+
+                <h1>Publikacje</h1>
+
+            </div>
+        </div>
+
+
+                <div class="row ">
+
+                            <div class="col-md-2 offset-md-3 col2 align-content-center">
+                                <div class="card">
+
+                                    <div class="card-body">
+
+                                    <figure><img src=https://1.bp.blogspot.com/-acQoo3lPr1U/XdPRG4hxalI/AAAAAAAAADM/Q5Y5XEe_H74Ln8INrUC_vZczTxhWgYIFgCLcBGAsYHQ/s1600/JPEG_20191019_202440.jpg
+                                         style="width:100%"
+                                         alt="" ><figcaption>Wydanie październik 2019</figcaption></figure>
+                                    </div>
+                                </div>
+
+                        </div>
+                    <div class="col-md-2  col2 align-content-center">
+                        <div class="card">
+
+                            <div class="card-body">
+                            <figure><img src=https://1.bp.blogspot.com/--pWOnay8Gzc/XdPRDJl-KvI/AAAAAAAAADA/rNU6DoTZ21oD9_y_fEh6TlY49Al2f7LpACLcBGAsYHQ/s1600/JPEG_20190314_202454.jpg
+                                 style="width:100%"
+                                 alt="" ><figcaption>Wydanie wrzesień 2019</figcaption></figure>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col2 align-content-center">
+                        <div class="card">
+
+                            <div class="card-body">
+                        <figure><img src=https://1.bp.blogspot.com/--pWOnay8Gzc/XdPRDJl-KvI/AAAAAAAAADA/rNU6DoTZ21oD9_y_fEh6TlY49Al2f7LpACLcBGAsYHQ/s1600/JPEG_20190314_202454.jpg
+                                     style="width:100%"
+                                     alt="" ><figcaption>Wydanie listopad 2019</figcaption></figure>
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id=data"></div>
+
+
+        <div class="row">
+            <div class="col-md-7 offset-md-3 col1 text-md-center">
+
+                <h2>2019 Poland, All rights reserved</h2>
+
+            </div>
+    </div>
+    </div>
+
+</section>
+</body>
+</html>

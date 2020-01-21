@@ -1,0 +1,45 @@
+div#dane {
+
+    background-color: #d9d9d9;
+
+    border-radius: 6px;
+
+margin: 10px 0px 0px 0px;
+
+    padding: 0px;
+
+    border: 1px solid #d9d9d9;
+
+}
+
+div.daneItem {
+
+
+
+    color: #434343;
+
+    padding: 10px;
+
+}
+
+div.daneItem:nth-child(2n) {
+
+    background-color: #fafafa;
+
+}
+
+div.daneItem:first-child {
+
+    border-top-left-radius: 6px;
+
+    border-top-right-radius: 6px;
+
+}
+
+div.daneItem:last-child {
+
+    border-bottom-left-radius: 6px;
+
+    border-bottom-right-radius: 6px;
+
+}
